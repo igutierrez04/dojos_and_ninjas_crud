@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.models.ninja_model import Ninja
 
 class Dojo:
     # variable to store the name of the database we are connecting to
@@ -8,6 +9,8 @@ class Dojo:
         self.name = data['name']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        # Create an empty list to store ninjas associated with the dojos
+        self.ninjas = []
 
 
     @classmethod
