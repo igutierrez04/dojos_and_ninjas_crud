@@ -30,7 +30,7 @@
                     <h1>All Dojos</h1>
                     <div class="border border-secondary border-1 row">
                         {% for dojo in dojos %}
-                            <a href="/dojo/show" class="fs-5 my-2 ">{{ dojo.name }}</a>
+                            <a href="/dojo/show/{{ dojo.id }}" class="fs-5 my-2 ">{{ dojo.name }}</a>
                         {% endfor %}
                     </div>
                     <a href="/ninja/create" class="btn btn-outline-primary mt-3">Add a Ninja</a>
