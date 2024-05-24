@@ -20,7 +20,9 @@ def create_dojo():
     Dojo.create_dojo(data)
     return redirect('/dojo')
 
-@app.route('/dojo/show')
-def show_dojo():
-    print('we out here')
-    return render_template('show_dojo.html')
+@app.route('/dojo/show/<int:id>')
+def show_dojo(id):
+    data = {
+        'id': id
+    }
+    return render_template('show_dojo.html', dojo_data = Dojo.get_dojo_w_ninjas(data))
