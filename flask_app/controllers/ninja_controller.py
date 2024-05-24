@@ -17,3 +17,7 @@ def create_ninja():
     }
     Ninja.create_ninja(data)
     return redirect(f'/dojo/show/{request.form["dojo_id"]}')
+
+@app.route('/ninja/edit/<int:id>')
+def update_ninja(id):
+    pass

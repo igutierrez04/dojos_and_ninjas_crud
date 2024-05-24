@@ -28,6 +28,7 @@
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
                             <th scope="col">Age</th>
+                            <th scope="col">Actions</th>
                         </thead>
                         <tbody>
                             {% for ninja in dojo_data.ninjas %}
@@ -35,6 +36,7 @@
                                 <td>{{ ninja.first_name }}</td>
                                 <td>{{ ninja.last_name }}</td>
                                 <td>{{ ninja.age }}</td>
+                                <td><a href="" class="text-decoration-none text-light">Edit</a> | <a href="" class="text-decoration-none text-light">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
