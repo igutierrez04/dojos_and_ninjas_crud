@@ -18,7 +18,7 @@
 
             <div class="col-lg">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h1 class="mx-3">{{ dojo_data.name }}</h1>
+                    <h1 class="mx-3">{{ dojo.name }} Ninjas</h1>
                     <a href="/" class="btn btn-outline-primary btn-lg my-3">Home</a>
                 </div>
                 <div class="table-responsive">
@@ -31,12 +31,12 @@
                             <th scope="col">Actions</th>
                         </thead>
                         <tbody>
-                            {% for ninja in dojo_data.ninjas %}
+                            {% for ninja in dojo.ninjas %}
                             <tr>
                                 <td>{{ ninja.first_name }}</td>
                                 <td>{{ ninja.last_name }}</td>
                                 <td>{{ ninja.age }}</td>
-                                <td><a href="" class="text-decoration-none text-light">Edit</a> | <a href="" class="text-decoration-none text-light">Delete</a></td>
+                                <td><a href="/ninja/edit/{{ ninja.id }}" class="text-decoration-none text-light">Edit</a> | <a href="/ninja/destroy/{{ ninja.id }}/{{ dojo.id }}" class="text-decoration-none text-light">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
